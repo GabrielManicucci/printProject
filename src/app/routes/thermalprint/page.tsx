@@ -47,6 +47,13 @@ export default function Teste() {
       >
         Imprimir!
       </button>
+
+      <Link
+        className="mt-4 px-6 py-4 bg-stone-700 text-slate-100 rounded-md"
+        href={"/"}
+      >
+        Ir para home
+      </Link>
     </div>
   );
 }
