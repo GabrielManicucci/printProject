@@ -88,24 +88,33 @@ export default function Main() {
   });
 
   return (
-    <div className="flex min-h-screen flex-col items-center p-24 gap-3">
+    <div className="flex min-h-screen flex-col items-center p-24">
       {/* <div className="bg-stone-300 w-[5cm] h-[22.5cm]" ref={printRef}>
         {receipt}
       </div> */}
-      <div ref={printRef} className="flex bg-stone-300 w-[225mm] h-[50mm] p-4">
-        <Barcode
-          value="123456789012"
-          format="CODE128"
-          width={1}
-          height={30}
-          displayValue={true}
-          fontOptions=""
-          fontSize={12}
-          margin={10}
-          lineColor="black"
-        />
-        <h1>Etiqueta vertical Teste</h1>
-        <p>conteúdo teste</p>
+      <div
+        ref={printRef}
+        className="flex bg-stone-300 w-[225mm] h-[50mm] px-5 text-xs"
+      >
+        <div className="-rotate-90 ml-7">
+          <Barcode
+            value="123456789012"
+            format="CODE128"
+            width={1.2}
+            height={30}
+            displayValue={true}
+            fontOptions=""
+            fontSize={12}
+            margin={10}
+            lineColor="black"
+            renderer="svg"
+          />
+        </div>
+
+        <div className="-rotate-90 flex gap-2 items-center flex-col">
+          <h1 className="">Etiqueta vertical Teste</h1>
+          <p>conteúdo teste</p>
+        </div>
       </div>
 
       <button
