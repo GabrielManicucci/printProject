@@ -62,7 +62,7 @@ export default function Main() {
     documentTitle: "Document for print",
     pageStyle: `
       @page {
-        size: 225mm 50mm;
+        size: 5.08cm 7.26cm;
         margin: 0;
       }
       @media print {
@@ -94,9 +94,9 @@ export default function Main() {
       </div> */}
       <div
         ref={printRef}
-        className="flex bg-stone-300 w-[225mm] h-[50mm] px-5 text-xs"
+        className="flex flex-col items-center bg-stone-300 w-[76mm] h-[50mm] px-2 text-xs gap-3 py-4"
       >
-        <div className="-rotate-90 ml-7">
+        <div className="">
           <Barcode
             value="123456789012"
             format="CODE128"
@@ -111,9 +111,9 @@ export default function Main() {
           />
         </div>
 
-        <div className="-rotate-90 flex gap-2 items-center flex-col">
+        <div className="flex gap-2 items-center flex-col">
           <h1 className="">Etiqueta vertical Teste</h1>
-          <p>conteúdo teste</p>
+          <p>onteúdo teste</p>
         </div>
       </div>
 
