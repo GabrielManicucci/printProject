@@ -11,6 +11,7 @@
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
+    "react-barcode": "^1.5.3",
     "react-dom": "^18",
     "react-thermal-printer": "^0.18.1",
     "react-to-print": "^2.15.1"
