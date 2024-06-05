@@ -94,7 +94,7 @@ export default function Main() {
       </div> */}
       <div
         ref={printRef}
-        className="flex flex-col items-center bg-stone-300 w-[76mm] h-[50mm] px-2 text-xs gap-3 py-4"
+        className="flex flex-col items-center w-[76mm] h-[50mm] px-2 text-xs gap-3 py-4"
       >
         <div className="">
           <Barcode
@@ -110,11 +110,11 @@ export default function Main() {
             renderer="svg"
           />
         </div>
-
+        {/* 
         <div className="flex gap-2 items-center flex-col">
           <h1 className="">Etiqueta vertical Teste</h1>
           <p>onteúdo teste</p>
-        </div>
+        </div> */}
       </div>
 
       <button
