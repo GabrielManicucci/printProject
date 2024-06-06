@@ -4,6 +4,8 @@ import React from "react";
 class PrintButton extends React.Component {
   handlePrint = async () => {
     try {
+      const connectedDevices = await (navigator as any).usb.getDevices();
+      console.log("Dispositivos conectados:", connectedDevices);
       // Solicitar ao usuário que selecione um dispositivo USB.
       const device = await (navigator as any).usb
         .requestDevice({
@@ -15,6 +17,13 @@ class PrintButton extends React.Component {
         .catch((e: any) => {
           console.error(`There is no device. ${e}`);
         });
+
+      if (!device) {
+        console.error("Nenhum dispositivo selecionado");
+        return;
+      }
+
+      console.log("Dispositivo selecionado:", device);
 
       // Conectar ao dispositivo.
       await device.open();
